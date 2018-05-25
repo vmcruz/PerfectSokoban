@@ -1,0 +1,53 @@
+@font-face {
+	font-family: "8bits";
+	src: url('../assets/04B_03_.TTF') format('truetype');
+}
+
+#warning-message { display: none; }
+#canvas {
+    transition: opacity 1s ease-in;
+    -ms-transition: opacity 1s ease-in;
+    -moz-transition: opacity 1s ease-in;
+    -webkit-transition: opacity 1s ease-in;
+	opacity: 0;
+	overflow: hidden;
+}
+
+@media only screen and (orientation:portrait){
+	#canvas { display:none; }
+	#warning-message {
+		display:block;
+		font-family: "Helvetica";
+		font-size: 14px;
+		width: 200px;
+		height: 120px;
+		padding: 5px;
+		position: absolute;
+		left: 50%;
+		top: 100%;
+		margin-left: -100px;
+		margin-top: -160px;
+		border-radius: 5px;
+		background-color: #fff;
+		border-top: 2px solid #eee;
+		border-right: 2px solid #eee;
+		border-left: 1px solid #999;
+		border-bottom: 1px solid #999;
+	}
+	#arrow {
+		width: 0; 
+		height: 0; 
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-top: 20px solid #fff;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin-left: -20px;
+		margin-top: -30px;
+	}
+}
+
+@media only screen and (orientation:landscape){
+	#warning-message { display:none; }
+}
